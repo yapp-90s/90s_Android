@@ -15,7 +15,13 @@
         android:theme="@style/AppTheme">
         <activity
             android:name="kr.ninety.android.MainActivity"
-            android:launchMode="singleTop" />
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
