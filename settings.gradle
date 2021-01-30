@@ -1,2 +1,7 @@
-include ':app'
+include ':presentation'
 rootProject.name = "90s_android"
+include ':domain'
+include ':data'
+include ':local'
+include ':remote'
+include ':app'
