@@ -21,6 +21,8 @@
     <color name="dark_gray3">#4d4d59</color>
     <color name="dark_gray4">#403b3b</color>
     <color name="dark_gray5">#575252</color>
+    <color name="dark_gray6">#212121</color>
+    <color name="dark_gray7">#100F0F</color>
 
     <color name="orange">#F65D48</color>
     <color name="red">#f64867</color>
@@ -33,6 +35,6 @@
     <color name="light_gray3">#e4e4e5</color>
     <color name="light_gray4">#f3f1f0</color>
     <color name="light_gray5">#e2e3e4</color>
-
+    <color name="light_gray6">#626271</color>
 
 </resources>
