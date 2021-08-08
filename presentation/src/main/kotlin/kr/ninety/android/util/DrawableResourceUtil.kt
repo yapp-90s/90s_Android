@@ -6,13 +6,14 @@ import android.graphics.drawable.GradientDrawable
 import androidx.annotation.ColorInt
 
 object DrawableResourceUtil {
-    fun gradientDrawable(
+    fun setBackground(
         context: Context,
         @ColorInt
         backgroundColor: Int? = null,
         cornerRadius: Float? = null,
-        strokeColor: ColorDrawable? = null,
-        strokeResId: Int? = null
+        @ColorInt
+        strokeColor: Int? = null,
+        strokePixel: Float? = null
     ): GradientDrawable {
         val radius = cornerRadius?.let {
             cornerRadius * (context.resources.displayMetrics.density)
@@ -25,9 +26,9 @@ object DrawableResourceUtil {
 
             gradientDrawable.cornerRadius = radius
 
-            if (strokeColor != null && strokeResId != null) {
-                val strokeWithPixel = strokeResId * (context.resources.getDimensionPixelSize(strokeResId))
-                gradientDrawable.setStroke(strokeWithPixel, strokeColor.color)
+            if (strokeColor != null && strokePixel != null) {
+                val strokeWithPixel = (strokePixel * (context.resources.displayMetrics.density)).toInt()
+                gradientDrawable.setStroke(strokeWithPixel, strokeColor)
             }
         }
     }

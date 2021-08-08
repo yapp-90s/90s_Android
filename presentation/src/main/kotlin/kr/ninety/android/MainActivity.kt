@@ -103,12 +103,12 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         }
     }
 
-//        /**
-//         * Component Background Example
-//         */
-//        button.background = DrawableResourceUtil.gradientDrawable(
-//            context = this,
-//            backgroundColor = resources.getColor(R.color.orange, null),
-//            cornerRadius = 8f
-//        )
+//    /**
+//     * Component Background Example
+//     */
+//    binding.button.background = DrawableResourceUtil.setBackground(
+//    context = this,
+//    backgroundColor = resources.getColor(R.color.orange, null),
+//    cornerRadius = 8f
+//    )
 }
