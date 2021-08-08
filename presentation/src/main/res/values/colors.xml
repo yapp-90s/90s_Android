@@ -1,10 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- opacity conventions "_xxp". ex) _35p means 35percent. -->
 <resources>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <color name="white">#ffffff</color>
+    <color name="white_30p">#4DFFFFFF</color>
+
+    <color name="white1">#f8f8f8</color>
+
+    <color name="black">#000000</color>
+    <color name="black_35p">#59000000</color>
+
+    <color name="dark_gray1">#18171D</color>
+    <color name="dark_gray2">#100f0f</color>
+    <color name="dark_gray3">#4d4d59</color>
+    <color name="dark_gray4">#403b3b</color>
+    <color name="dark_gray5">#575252</color>
+    <color name="dark_gray6">#212121</color>
+    <color name="dark_gray7">#100F0F</color>
+
+    <color name="orange">#F65D48</color>
+    <color name="red">#f64867</color>
+
+    <color name="green">#30cfb3</color>
+    <color name="green2">#65d398</color>
+
+    <color name="light_gray1">#BEBEBE</color>
+    <color name="light_gray2">#9e9ea3</color>
+    <color name="light_gray3">#e4e4e5</color>
+    <color name="light_gray4">#f3f1f0</color>
+    <color name="light_gray5">#e2e3e4</color>
+    <color name="light_gray6">#626271</color>
+
 </resources>
