@@ -5,6 +5,12 @@ plugins {
     id 'dagger.hilt.android.plugin'
 }
 
+def configPropertiesFile = file('config.properties')
+Properties configProperties = new Properties()
+
+if (configPropertiesFile.canRead()) {
+    configProperties.load(new FileInputStream(configPropertiesFile))
+}
 
 android {
     compileSdkVersion 30
@@ -13,6 +19,15 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "String", "API_BASE_URL", "\"${configProperties['API_BASE_URL_DEBUG']}\""
+        }
+        release {
+            buildConfigField "String", "API_BASE_URL", "\"${configProperties['API_BASE_URL_RELEASE']}\""
+        }
     }
 }
 
