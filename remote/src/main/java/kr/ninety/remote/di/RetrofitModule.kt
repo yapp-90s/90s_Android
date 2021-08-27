@@ -1,6 +1,3 @@
-/*
- * Created by Lee Oh Hyung on 2021/01/30.
- */
 package kr.ninety.remote.di
 
 import android.util.Log
@@ -8,6 +5,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import kr.ninety.data.remote.interceptor.HeaderInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -34,7 +32,10 @@ object RetrofitModule {
 
     @Provides
     @Singleton
-    fun provideOkHttpClient(loggerInterceptor: HttpLoggingInterceptor): OkHttpClient.Builder =
+    fun provideOkHttpClient(
+        loggerInterceptor: HttpLoggingInterceptor,
+        headerInterceptor: HeaderInterceptor
+    ): OkHttpClient.Builder =
         OkHttpClient.Builder()
             .retryOnConnectionFailure(true)
             .connectTimeout(CONNECT_TIMEOUT, TimeUnit.SECONDS)

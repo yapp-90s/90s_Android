@@ -1,11 +1,11 @@
-/*
- * Created by Lee Oh Hyung on 2021/01/30.
- */
 package kr.ninety.remote.di
 
+import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import kr.ninety.data.remote.RemoteDataSource
+import kr.ninety.remote.RemoteDataSourceImpl
 
 @Module(
     includes = [
@@ -14,5 +14,10 @@ import dagger.hilt.components.SingletonComponent
     ]
 )
 @InstallIn(SingletonComponent::class)
-object DataSourceModule {
+abstract class DataSourceModule {
+
+    @Binds
+    abstract fun provideRemoteDataSource(
+        remoteDataSourceImpl: RemoteDataSourceImpl
+    ): RemoteDataSource
 }
