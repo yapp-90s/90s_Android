@@ -41,6 +41,8 @@ object RetrofitModule {
             .writeTimeout(WRITE_TIMEOUT, TimeUnit.SECONDS)
             .readTimeout(READ_TIMEOUT, TimeUnit.SECONDS)
             .addInterceptor(loggerInterceptor)
+            .addInterceptor(headerInterceptor)
+            .authenticator(headerInterceptor)
 
     @Provides
     @Singleton
