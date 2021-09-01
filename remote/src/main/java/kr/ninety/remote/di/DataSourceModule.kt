@@ -7,12 +7,7 @@ import dagger.hilt.components.SingletonComponent
 import kr.ninety.data.remote.RemoteDataSource
 import kr.ninety.remote.RemoteDataSourceImpl
 
-@Module(
-    includes = [
-        ApiModule::class,
-        RetrofitModule::class
-    ]
-)
+@Module
 @InstallIn(SingletonComponent::class)
 abstract class DataSourceModule {
 

@@ -7,11 +7,7 @@ import dagger.hilt.components.SingletonComponent
 import kr.ninety.data.local.LocalDataSource
 import kr.ninety.local.LocalDataSourceImpl
 
-@Module(
-    includes = [
-        PreferencesModule::class
-    ]
-)
+@Module
 @InstallIn(SingletonComponent::class)
 abstract class DataSourceModule {
 
