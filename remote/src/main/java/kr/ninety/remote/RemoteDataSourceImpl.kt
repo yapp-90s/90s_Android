@@ -2,7 +2,11 @@ package kr.ninety.remote
 
 import io.reactivex.Single
 import kr.ninety.data.remote.RemoteDataSource
-import kr.ninety.data.remote.model.*
+import kr.ninety.data.remote.model.User
+import kr.ninety.data.remote.model.Film
+import kr.ninety.data.remote.model.Message
+import kr.ninety.data.remote.model.Photo
+import kr.ninety.data.remote.model.Album
 import kr.ninety.remote.api.AlbumApi
 import kr.ninety.remote.api.FilmApi
 import kr.ninety.remote.api.PhotoApi

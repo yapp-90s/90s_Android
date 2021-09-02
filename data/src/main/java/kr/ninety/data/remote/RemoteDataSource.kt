@@ -1,7 +1,11 @@
 package kr.ninety.data.remote
 
 import io.reactivex.Single
-import kr.ninety.data.remote.model.*
+import kr.ninety.data.remote.model.User
+import kr.ninety.data.remote.model.Film
+import kr.ninety.data.remote.model.Message
+import kr.ninety.data.remote.model.Photo
+import kr.ninety.data.remote.model.Album
 
 interface RemoteDataSource {
     fun login(userInfo: User.Info): Single<User.JsonToken>
