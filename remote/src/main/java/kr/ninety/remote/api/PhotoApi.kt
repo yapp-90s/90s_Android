@@ -10,7 +10,7 @@ import retrofit2.http.Path
 
 interface PhotoApi {
 
-    @POST("photo/upload")
+    @POST("photo/upload/{filmUid}")
     fun postPhotoUpload(
         @Path("filmUid") filmUid: String
     ): Single<PhotoResponse>
