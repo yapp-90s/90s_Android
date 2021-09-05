@@ -5,7 +5,7 @@ plugins {
     id 'dagger.hilt.android.plugin'
 }
 
-def configPropertiesFile = file('config.properties')
+def configPropertiesFile = file('../properties/config.properties')
 Properties configProperties = new Properties()
 
 if (configPropertiesFile.canRead()) {
